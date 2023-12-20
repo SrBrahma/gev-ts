@@ -20,12 +20,13 @@
     "dist"
   ],
   "devDependencies": {
+    "@biomejs/biome": "1.4.1",
     "@sindresorhus/tsconfig": "^5.0.0",
     "bun-types": "latest",
+    "eslint-config-gev": "^3.10.4",
     "husky": "^8.0.1",
     "lint-staged": "^15.2.0",
     "rimraf": "^5.0.5",
-    "typescript": "^5.3.3",
-    "eslint-config-gev": "^3.10.4"
+    "typescript": "^5.3.3"
   }
 }
