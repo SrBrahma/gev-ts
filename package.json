@@ -16,14 +16,12 @@
   },
   "keywords": [],
   "license": "MIT",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "devDependencies": {
     "@biomejs/biome": "1.4.1",
     "@sindresorhus/tsconfig": "^5.0.0",
     "bun-types": "latest",
-    "eslint-config-gev": "^3.10.4",
+    "eslint-config-gev": "^3.10.5",
     "husky": "^8.0.1",
     "lint-staged": "^15.2.0",
     "rimraf": "^5.0.5",
