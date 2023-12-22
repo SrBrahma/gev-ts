@@ -21,9 +21,10 @@ module.exports = {
 				sourceType: "module",
 			},
 		},
+		{
+			files: ["*.ts", "*.js", "*.tsx", "*.jsx"],
+			extends: ["biome"],
+		},
 	],
-	ignorePatterns: ["/lib/**/*", "/dist/**/*"],
-	rules: {
-		"unicorn/better-regex": "off",
-	},
+	ignorePatterns: ["/dist/**/*"],
 }
