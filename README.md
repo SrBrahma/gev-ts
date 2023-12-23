@@ -26,7 +26,7 @@ Typescript template to be used with Bun as package manager. Can setup TS package
 ## 💿 Installation
 
 ```bash
-bun install
+bun install $PROJECT_NAME
 ```
 
 ## 📖 Usage

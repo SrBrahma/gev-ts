@@ -8,11 +8,16 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "start": "bun --watch run src/index.ts",
     "build": "rimraf dist && npx tsc -p ./tsconfig.build.json",
-    "prepublishOnly": "bun run build",
-    "pre-commit": "bun test",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "format:check": "eslint . && biome check .",
+    "format": "eslint --fix . && biome check --apply-unsafe .",
+    "tsw": "tsc --watch --noEmit",
+    "typecheck": "tsc --noEmit",
+    "pre-commit": "bun format:check && bun typecheck && bun test",
+    "test:watch": "bun test --watch",
+    "watch": "bun --watch run scripts/index.ts",
+    "start": "bun run scripts/index.ts"
   },
   "keywords": [],
   "license": "MIT",
@@ -20,11 +25,8 @@
   "devDependencies": {
     "@biomejs/biome": "1.4.1",
     "@sindresorhus/tsconfig": "^5.0.0",
-    "bun-types": "latest",
-    "eslint-config-biome": "^1.0.1",
     "eslint-config-gev": "^3.10.5",
     "husky": "^8.0.1",
-    "lint-staged": "^15.2.0",
     "rimraf": "^5.0.5",
     "typescript": "^5.3.3"
   }
